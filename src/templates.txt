@@ -1,0 +1,29 @@
+        //Verifica se a cadeia é valida
+        for(int i = 0; i < cadeia.length(); i++){
+            if (cadeia.charAt(i) == 'x') {
+                System.out.println("cadeia não valida");
+                break;
+            } else if (cadeia.charAt(i) == 'y'){
+                System.out.println("cadeia não valida");
+                break;
+            } else if (cadeia.charAt(i) == 'z') {
+                System.out.println("cadeia não valida");
+                break;
+            } else if (cadeia.charAt(i) == 't') {
+                System.out.println("cadeia não valida");
+                break;
+            } else if (cadeia.charAt(i) == 'w'){
+                System.out.println("cadeia não valida");
+                break;
+            }
+        }
+
+        if (cadeiaRefatorada.contains("x") || cadeiaRefatorada.contains("y") || cadeiaRefatorada.contains("z") || cadeiaRefatorada.contains("t") || cadeiaRefatorada.contains("w")) {
+            System.out.println("cadeia não valida");
+        }
+
+
+        Regex
+        ([xyztw])+([+\-*/])|([xyztw])+([\(\)\[\]\{\}\@\#\!])|([xyztw])+([\d])
+
+//botar para limitar a cadeia no final da operação de validação
