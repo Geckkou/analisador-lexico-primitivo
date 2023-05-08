@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,14 +6,14 @@ public class Teste {
     public static void main(String[] args) {
 
         //Declaração da cadeia e leitura
-        System.out.println("Informe a cadeia");
-        String cadeia  = new String();
+        System.out.print("Informe a cadeia: ");
+        String cadeia;
         Scanner scanner = new Scanner (System.in);
         cadeia = scanner.nextLine();
 
+        //Limitando a cadeia para 10 caracteres
         StringBuilder refatorada = new StringBuilder();
 
-        //Limitando a cadeia para 10 caracteres
         for (int i = 0; i < 10; i++) {
             char token = cadeia.charAt(i);
             refatorada.append(token);
@@ -32,6 +31,11 @@ public class Teste {
         Pattern regex2 = Pattern.compile("([xyztw])+([+\\-*/])|([xyztw])+([\\(\\)\\[\\]\\{\\}\\@\\#\\!])|([xyztw])+([\\d])");
         Matcher matcher2 = regex2.matcher(cadeiaRefatorada);
 
+        //Declarando Regex
+        //verifica se os tokens xyztw estão na cadeia
+        Pattern regex3 = Pattern.compile("[(xyztw)]");
+        Matcher matcher3 = regex3.matcher(cadeiaRefatorada);
+
         //Verifica se a cadeia é valida
         if (matcher.find()) {
             System.out.println("Palavra reservada");
@@ -39,11 +43,13 @@ public class Teste {
 
         if (matcher2.find()) {
             System.out.println("Expressão matemática");
-        } else if (cadeiaRefatorada.contains("x") || cadeiaRefatorada.contains("y") || cadeiaRefatorada.contains("z") || cadeiaRefatorada.contains("t") || cadeiaRefatorada.contains("w")) {
+        } else if (matcher3.find()) {
             System.out.println("cadeia não valida");
         }
 
-        //System.out.println(cadeia);
-        System.out.println(cadeiaRefatorada);
+        //Imprimindo a cadeia
+        System.out.println("");
+        System.out.print("Sua cadeia é: " + cadeiaRefatorada);
+        scanner.close();
     }
 }
