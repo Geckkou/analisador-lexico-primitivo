@@ -14,9 +14,13 @@ public class Teste {
         //Limitando a cadeia para 10 caracteres
         StringBuilder refatorada = new StringBuilder();
 
-        for (int i = 0; i < 10; i++) {
-            char token = cadeia.charAt(i);
-            refatorada.append(token);
+        for (int i = 0; i < cadeia.length(); i++) {
+            if (cadeia.length() >= 10){
+                char token = cadeia.charAt(i);
+                refatorada.append(token);
+            } else {
+                refatorada = new StringBuilder(cadeia.toString());
+            }
         }
 
         String cadeiaRefatorada = refatorada.toString();
