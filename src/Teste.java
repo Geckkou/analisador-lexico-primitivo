@@ -16,10 +16,10 @@ public class Teste {
 
         for (int i = 0; i < cadeia.length(); i++) {
             if (cadeia.length() >= 10){
-                char token = cadeia.charAt(i);
-                refatorada.append(token);
+                String token = cadeia.substring(0,10);
+                refatorada = new StringBuilder(token);
             } else {
-                refatorada = new StringBuilder(cadeia.toString());
+                refatorada = new StringBuilder(cadeia);
             }
         }
 
