@@ -25,5 +25,6 @@
 
         Regex
         ([xyztw])+([+\-*/])|([xyztw])+([\(\)\[\]\{\}\@\#\!])|([xyztw])+([\d])
+        ([\(\)\[\]\{\}\@\#\!])|([xyztw])+([+\-*/])|([+\-*/])+([xyztw])|([xyztw])([\(\)\[\]\{\}\@\#\!])|([xyztw])+([\d])
 
 //botar para limitar a cadeia no final da operação de validação
