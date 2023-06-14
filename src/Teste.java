@@ -32,7 +32,7 @@ public class Teste {
 
         //Declarando Regex
         //verifica se os tokens xyztw vem seguidos de acordo com os requisitos da 2 questão
-        Pattern regex2 = Pattern.compile("([xyztw])+([+\\-*/])|([xyztw])+([\\(\\)\\[\\]\\{\\}\\@\\#\\!])|([xyztw])+([\\d])");
+        Pattern regex2 = Pattern.compile("([xyztw])+([+\\-*/])|([\\d])+([+\\-*/])");
         Matcher matcher2 = regex2.matcher(cadeiaRefatorada);
 
         //Declarando Regex
